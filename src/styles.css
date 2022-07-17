@@ -1,0 +1,143 @@
+h1,
+h2,
+h5,
+h6,
+.current-day,
+.current-time,
+.date,
+.week-temperature,
+input::placeholder,
+.btn-default {
+  font-family: "Fascinate Inline", cursive;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h5,
+h6,
+.week-temperature,
+input::placeholder {
+  color: #7a76a9;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 30px;
+}
+
+h5 {
+  font-weight: 500;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+h6 {
+  font-size: smaller;
+  font-weight: 600;
+}
+.degrees {
+  font-size: 1.5rem;
+  color: #7a76a9;
+}
+
+.main-field {
+  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #ffedd4;
+  border-radius: 10px;
+  padding: 30px 45px 55px 45px;
+}
+
+.btn-default {
+  margin-top: -5px;
+  padding: 2px;
+  width: 90px;
+  font-size: smaller;
+  color: #7a76a9;
+  background: #f1d0c9;
+  border-radius: 10px;
+  border: 1px solid #bc5a9e;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+}
+
+.btn-default:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.btn-default-1 {
+  margin-top: 20px;
+  margin-left: 195px;
+  padding: 7px;
+  width: 90px;
+  font-size: smaller;
+  color: #7a76a9;
+  background: #f1d0c9;
+  border-radius: 10px;
+  border: 1px solid #bc5a9e;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+}
+.btn-default-1:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.enterfield {
+  border-radius: 5px;
+  border: 1px solid #bc5a9e;
+  background-color: #ffdfb1;
+  padding: 5px 5px 5px 5px;
+}
+
+.current-day {
+  color: #68a5cc;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 1.25rem;
+}
+.current-time {
+  color: #68a5cc;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-left: 30px;
+}
+.date {
+  color: #68a5cc;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 33px;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  font-size: smaller;
+}
+
+.week-temperature {
+  font-weight: 500;
+  font-size: smaller;
+}
+.card {
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffedd4;
+  border-color: #f1d0c9;
+}
