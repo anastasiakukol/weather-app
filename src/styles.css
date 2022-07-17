@@ -7,7 +7,8 @@ h6,
 .date,
 .week-temperature,
 input::placeholder,
-.btn-default {
+.btn-default,
+.link {
   font-family: "Fascinate Inline", cursive;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -140,4 +141,9 @@ h6 {
   margin: 0 auto;
   background-color: #ffedd4;
   border-color: #f1d0c9;
+}
+.link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: smaller;
 }
