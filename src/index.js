@@ -1,4 +1,3 @@
-//Feature 1
 let now = new Date();
 function formatDate(newDate) {
   let days = [
@@ -11,13 +10,11 @@ function formatDate(newDate) {
     "Saturday",
   ];
   let day = days[newDate.getDay()];
-  let todayday = document.querySelector("#day");
   let hours = newDate.getHours();
+  hours = hours > 9 ? hours : "0" + hours;
   let minutes = newDate.getMinutes();
   minutes = minutes > 9 ? minutes : "0" + minutes;
-  let todayhours = document.querySelector("#time");
   let date = newDate.getDate();
-  let todaydate = document.querySelector("#current-date");
   let months = [
     "January",
     "February",
@@ -33,13 +30,12 @@ function formatDate(newDate) {
     "December",
   ];
   let month = months[newDate.getMonth()];
-  todayday.innerHTML = `${day}`;
-  todayhours.innerHTML = `${hours}:${minutes} `;
-  todaydate.innerHTML = `${date} ${month}`;
+  document.querySelector("#day").innerHTML = `${day}`;
+  document.querySelector("#time").innerHTML = `${hours}:${minutes} `;
+  document.querySelector("#current-date").innerHTML = `${date} ${month}`;
 }
 console.log(formatDate(now));
 
-//Feature 2
 function search(city) {
   let apiKey = "5f91a3ee1e9a25ad7ffa3c41adb88170";
   let units = "metric";
