@@ -76,6 +76,7 @@ function showTemp(response) {
       "alt",
       `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
     );
+  celsiusTemp = response.data.main.temp;
 }
 
 function showPosition(position) {
@@ -87,7 +88,30 @@ function showPosition(position) {
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp);
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
+}
+
+let celsiusTemp = null;
+
 let button = document.querySelector("#current-position");
 button.addEventListener("click", getCurrentPosition);
 
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", showFahrenheitTemp);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", showCelsiusTemp);
 search("London");
