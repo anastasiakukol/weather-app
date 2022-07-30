@@ -115,3 +115,24 @@ fahrenheitlink.addEventListener("click", showFahrenheitTemp);
 let celsiuslink = document.querySelector("#celsius-link");
 celsiuslink.addEventListener("click", showCelsiusTemp);
 search("London");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+            <h6>${day}</h6>
+            <img src="images/Sun.png" alt="bright sun" width="30px" />
+            <span class="week-temperature">
+              15/21 ℃
+            </span>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
