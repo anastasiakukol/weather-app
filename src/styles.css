@@ -42,6 +42,7 @@ h5 {
 h6 {
   font-size: smaller;
   font-weight: 600;
+  margin-left: 10px;
 }
 a {
   text-decoration: none;
@@ -49,13 +50,13 @@ a {
 
 .main-field {
   text-align: center;
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   margin-top: 100px;
   background: #ffedd4;
@@ -130,12 +131,14 @@ a {
   font-size: smaller;
 }
 
-.week-temperature {
+.week-temperature-max,
+.week-temperature-min {
   font-weight: 500;
-  font-size: smaller;
+  font-size: 15px;
+  color: #7a76a9;
 }
 .card {
-  max-width: 680px;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
   background-color: #ffedd4;
