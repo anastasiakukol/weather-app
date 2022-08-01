@@ -62,8 +62,8 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   document
     .querySelector("#icon")
     .setAttribute(
@@ -78,6 +78,7 @@ function showTemp(response) {
     );
   celsiusTemp = response.data.main.temp;
   getForecast(response.data.coord);
+  changeForecastSlogan(descriptionElement);
 }
 
 function showPosition(position) {
@@ -145,6 +146,37 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
+
+function changeForecastSlogan(descriptionElement) {
+  let forecastSlogan = document.querySelector("#slogan");
+  if (
+    descriptionElement === "moderate rain" ||
+    descriptionElement === "overcast clouds" ||
+    descriptionElement === "broken clouds" ||
+    descriptionElement === "shower rain"
+  ) {
+    forecastSlogan.innerHTML = "Don't forget your umbrella ☂️";
+  } else {
+    if (
+      descriptionElement === "scattered clouds" ||
+      descriptionElement === "few clouds" ||
+      descriptionElement === "clear sky"
+    ) {
+      forecastSlogan.innerHTML = "Don't forget your sunglasses 👓";
+    } else {
+      if (
+        descriptionElement === "snow" ||
+        descriptionElement === "light snow" ||
+        descriptionElement === "heavy snow"
+      ) {
+        forecastSlogan.innerHTML = "Don't forget your scarf 🧣";
+      } else {
+        forecastSlogan.innerHTML = "Don't forget your smile 🤗";
+      }
+    }
+  }
+}
+
 let celsiusTemp = null;
 
 let button = document.querySelector("#current-position");

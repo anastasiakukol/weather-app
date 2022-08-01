@@ -37,6 +37,7 @@ h5 {
   text-align: left;
   margin-left: 20px;
   margin-top: 3px;
+  text-transform: capitalize;
 }
 
 h6 {
