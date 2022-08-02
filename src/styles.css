@@ -1,3 +1,8 @@
+body {
+  background-image: url("../img/sky.jpg");
+  background-size: cover;
+}
+
 h1,
 h2,
 h5,
@@ -36,6 +41,7 @@ h5 {
   font-weight: 500;
   text-align: left;
   margin-left: 20px;
+  margin-right: -20px;
   margin-top: 3px;
   text-transform: capitalize;
 }
@@ -131,6 +137,10 @@ a {
   margin-bottom: 40px;
   font-size: smaller;
 }
+.slogan {
+  margin-left: 5px;
+  max-width: 500px;
+}
 
 .week-temperature-max,
 .week-temperature-min {
@@ -142,7 +152,7 @@ a {
   max-width: 800px;
   display: block;
   margin: 0 auto;
-  background-color: #ffedd4;
+  background-color: #f1d0c9;
   border-color: #f1d0c9;
 }
 .link {
